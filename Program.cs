@@ -1,6 +1,6 @@
 ﻿string[] cibiPreferiti = { "pasta al sugo", "sushi", "pasta al burro", "pizza", "carbonara"};
 
-Console.WriteLine($"La lista contiene {cibiPreferiti.Length} elementi");
+//Console.WriteLine($"La lista contiene {cibiPreferiti.Length} elementi");
 
 //for(int i = 0; i < cibiPreferiti.Length; i++){
 //    Console.WriteLine($"Posizione n° {i} : {cibiPreferiti[i]}"  );
@@ -26,17 +26,12 @@ do
 {
     Console.WriteLine("inserisci il tuo cibo preferito");
     ciboUtente = Console.ReadLine();
-    Console.WriteLine(ciboUtente);
-    Console.WriteLine(cibiPreferiti.Contains(ciboUtente));
 
 } while (!cibiPreferiti.Contains(ciboUtente));
 
 
 Random random = new Random();
-int numero = 3; /*random.Next(0, cibiPreferiti.Length - 1);*/
-Console.WriteLine(numero);
-
-Console.WriteLine($"Il cibo preferito è: {cibiPreferiti[numero]} ");
+int numero = random.Next(0, cibiPreferiti.Length - 1);
 
 for (int i = 0; i < cibiPreferiti.Length; i++){
 
